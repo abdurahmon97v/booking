@@ -1,4 +1,5 @@
 const COLORS = {
+  bgColor: "#79B6EC",
   primary: "#312651",
   secondary: "#444262",
   tertiary: "#FF7754",

@@ -2,6 +2,7 @@ import { StyleSheet, Text, View } from "react-native";
 import { Stack } from "expo-router";
 import React from "react";
 import { SafeAreaView } from "react-native-safe-area-context";
+import { COLORS } from "../config/theme";
 
 const HomePage = () => {
   return (
@@ -19,6 +20,7 @@ export default HomePage;
 const styles = StyleSheet.create({
   safeArea: {
     flex: 1,
+    backgroundColor: COLORS.bgColor,
   },
   container: {
     flex: 1,
