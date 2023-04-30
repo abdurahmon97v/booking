@@ -1,15 +1,18 @@
 import { StyleSheet, Text, View } from "react-native";
 import { Stack } from "expo-router";
-import React from "react";
 import { SafeAreaView } from "react-native-safe-area-context";
-import { COLORS } from "../config/theme";
+import { IconPressable } from "../components";
+import { Check } from "../assets";
+import { COLORS, SIZES } from "../config/theme";
 
 const HomePage = () => {
   return (
     <SafeAreaView style={styles.safeArea}>
       <Stack.Screen options={{ headerShown: false }} />
       <View style={styles.container}>
-        <Text>booking app</Text>
+        <Text style={styles.title}>выберите язык интерфейса:</Text>
+        <IconPressable text="Русский" Icon={Check} />
+        <IconPressable text="O'zbekcha" Icon={Check} />
       </View>
     </SafeAreaView>
   );
@@ -27,5 +30,12 @@ const styles = StyleSheet.create({
     display: "flex",
     alignItems: "center",
     justifyContent: "center",
+    padding: 14,
+  },
+  title: {
+    fontSize: SIZES.large,
+    fontWeight: 600,
+    color: COLORS.primary,
+    marginBottom: 7,
   },
 });

@@ -9,6 +9,7 @@ const COLORS = {
 
   white: "#F3F4F8",
   lightWhite: "#FAFAFC",
+  green: "#8FD14F",
 };
 
 const RADIUS = {
