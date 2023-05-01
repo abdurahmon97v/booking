@@ -1,8 +1,10 @@
 const COLORS = {
   bgColor: "#79B6EC",
-  primary: "#312651",
+  primary: "#050038",
   secondary: "#444262",
   tertiary: "#FF7754",
+  red: "red",
+  sBtnColor: "#EC2761",
 
   gray: "#83829A",
   gray2: "#C1C0C8",

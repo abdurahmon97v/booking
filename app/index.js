@@ -1,18 +1,23 @@
 import { StyleSheet, Text, View } from "react-native";
 import { Stack } from "expo-router";
 import { SafeAreaView } from "react-native-safe-area-context";
+import { useRouter } from "expo-router";
 import { IconPressable } from "../components";
 import { Check } from "../assets";
 import { COLORS, SIZES } from "../config/theme";
 
 const HomePage = () => {
+  const router = useRouter();
+  const changeRoute = () => {
+    router.push("/login");
+  };
   return (
     <SafeAreaView style={styles.safeArea}>
       <Stack.Screen options={{ headerShown: false }} />
       <View style={styles.container}>
         <Text style={styles.title}>выберите язык интерфейса:</Text>
-        <IconPressable text="Русский" Icon={Check} />
-        <IconPressable text="O'zbekcha" Icon={Check} />
+        <IconPressable onPress={changeRoute} text="Русский" Icon={Check} />
+        <IconPressable onPress={changeRoute} text="O'zbekcha" Icon={Check} />
       </View>
     </SafeAreaView>
   );

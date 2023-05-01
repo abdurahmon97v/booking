@@ -1,8 +1,7 @@
 import { Pressable, Text, StyleSheet, View } from "react-native";
 import { COLORS, RADIUS, SIZES } from "../../../config/theme";
 
-export const IconPressable = (props) => {
-  const { onPress, text, Icon } = props;
+export const IconPressable = ({ onPress, text, Icon }) => {
   return (
     <Pressable style={style.container} onPress={onPress}>
       <Icon />

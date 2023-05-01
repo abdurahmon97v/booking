@@ -1,8 +1,7 @@
 import { StyleSheet, Pressable, Text, Animated } from "react-native";
 import { COLORS, SIZES } from "../../../config/theme";
 
-export const Button = (props) => {
-  const { onPress, title = "Cохранит", bgColor } = props;
+export const Button = ({ onPress, title = "Cохранит", bgColor, propStyle }) => {
   const animated = new Animated.Value(1);
   const fadeIn = () => {
     Animated.timing(animated, {
@@ -22,6 +21,7 @@ export const Button = (props) => {
     <Pressable
       style={{
         ...style.container,
+        ...propStyle,
         backgroundColor: bgColor ? bgColor : COLORS.green,
       }}
       onPress={onPress}
@@ -44,6 +44,7 @@ export const Button = (props) => {
 const style = StyleSheet.create({
   container: {
     borderRadius: 10,
+    alignItems: "center",
   },
   text: {
     color: COLORS.white,
